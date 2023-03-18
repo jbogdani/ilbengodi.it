@@ -38,7 +38,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
     <link rel="stylesheet" href="sites/default/css/styles.css">
     <link rel="shortcut icon" href="sites/default/images/css/favicon.png">
     <link rel="apple-touch-icon" href="sites/default/images/css/touch-icon-iphone.png">
@@ -108,35 +109,60 @@
               <p><strong>Oppure</strong>&nbsp;chiamateci direttamente&nbsp;al numero: <a href="tel:+390577355116">+39 0577 355116</a>.</p>
               <p>Vi aspettiamo!</p>
               
-              <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/bc752e7bf160d95d18ac03c1fd479eed?embedded=1"></div>
-              
-              <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-              <script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
-              
-              <!-- Get notified when the form is submitted, add your own code below: -->
-              <script>
-                const formkeepEmbed = document.querySelector('#formkeep-embed')
-                
-                formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
-                  console.log('Submitting form...')
-                })
-                
-                formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
-                  console.log('Submitted form...')
-                })
-              </script>
+              <div class="userform prenota">
+                <form action="https://formsubmit.co/info@ilbengodi.it" method="post">
+                  <div class="form-group col-sm-6">
+                    <label class=" control-label">Nome<span style="color:red"> *</span> </label>
+                    <input type="text" name="nome" data-label="Nome" class="form-control required" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label class="control-label">Telefono<span style="color:red"> *</span> </label>
+                    <input type="tel" name="telefono" class="form-control" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label class=" control-label">Numero posti al tavolo<span style="color:red"> *</span> </label>
+                    <select name="posti" class="form-control" required>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>5+</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label class="control-label">Data<span style="color:red"> *</span> </label>
+                    <div>
+                      <input type="date" name="data" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="form-group note">
+                    <label class=" control-label">Note</label>
+                    <div>
+                      <textarea name="note" rows="10" class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+                    <script src="https://www.tripadvisor.com/WidgetEmbed-cdsratingsonlynarrow?border=true&amp;locationId=1516354&amp;display_version=2&amp;uniq=484&amp;lang=en_US" async=""></script>
+                    <input class="btn btn-success" type="submit">
+                    <input class="btn btn-default" type="reset">
+                  </div>
+                </div>
+              </form>
             </div>
             
             
-            
-            <div id="TA_cdsratingsonlynarrow484" class="TA_cdsratingsonlynarrow">
-              <ul id="gUgxRk" class="TA_links jC9QTZM3">
-                <li id="yJo2nrwYjlJL" class="VJbGl03k">
-                  <a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
-                </li>
-              </ul>
+            <div class="text-center">
+              <div id="TA_cdsratingsonlynarrow484" class="TA_cdsratingsonlynarrow">
+                <ul id="gUgxRk" class="TA_links jC9QTZM3">
+                  <li id="yJo2nrwYjlJL" class="VJbGl03k">
+                    <a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a>
+                  </li>
+                </ul>
+              </div>
+              <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=484&amp;locationId=1516354&amp;lang=en_US&amp;border=true&amp;display_version=2"></script>
             </div>
-            <script src="https://www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=484&amp;locationId=1516354&amp;lang=en_US&amp;border=true&amp;display_version=2"></script>
           </div>
         </div>
       </section>
@@ -236,7 +262,7 @@
   </div><!--wrapper end-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
   <script src="sites/default/js/frontend.js"></script>
   <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-10461068-36', 'auto');ga('send', 'pageview');</script>
 </body>
