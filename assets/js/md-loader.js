@@ -31,13 +31,14 @@ class MDLoader {
    * Carica il contenuto MD dal file specificato
    * @param {string} mdFile - Path al file MD
    * @param {string} containerId - ID del container dove inserire il contenuto
+   * @returns {Promise} Promise che si risolve quando il contenuto è caricato
    */
   async loadContent(mdFile, containerId) {
     const container = document.getElementById(containerId);
     
     if (!container) {
       console.error(`Container ${containerId} non trovato`);
-      return;
+      return Promise.reject(new Error(`Container ${containerId} non trovato`));
     }
 
     try {
@@ -64,9 +65,12 @@ class MDLoader {
       // Aggiorna i metadati della pagina se presenti nel frontmatter
       this.updatePageMetadata(frontmatter);
       
+      return Promise.resolve();
+      
     } catch (error) {
       console.error('Errore nel caricamento del contenuto MD:', error);
       container.innerHTML = '<p>Errore nel caricamento del contenuto.</p>';
+      return Promise.reject(error);
     }
   }
 
@@ -162,7 +166,8 @@ const mdLoader = new MDLoader();
  * Funzione helper per caricare contenuti MD
  * @param {string} mdFile - Path al file MD
  * @param {string} containerId - ID del container
+ * @returns {Promise} Promise che si risolve quando il contenuto è caricato
  */
 function loadMDContent(mdFile, containerId) {
-  mdLoader.loadContent(mdFile, containerId);
+  return mdLoader.loadContent(mdFile, containerId);
 }

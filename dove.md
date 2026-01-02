@@ -5,19 +5,13 @@ keywords: Bengodi, ristorante toscano, Enoteca, Chianti, Siena, Casteluovo Berar
 lang: it
 ---
 
-[Via della Società Operaia 11 - 53019 Castelnuovo Berardenga](https://www.google.it/maps/dir//Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z)
+📍 Indirizzo: **Via della Società Operaia 11. 53019 Castelnuovo Berardenga**  
+- [🧭 Naviga con Google Maps](https://www.google.it/maps/dir/Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z)
+- [🧭 Naviga con Apple Maps](https://maps.apple.com/directions?destination=Via+della+Societ%C3%A0+Operaia+11%2C+Via+della+Societ%C3%A0+Operaia+11+53019+Castelnuovo+Berardenga+SI+Italy&mode=driving)
 
-E-mail: [info@ilbengodi.it](mailto:info@ilbengodi.it)
+✉️ E-mail: [info@ilbengodi.it](mailto:info@ilbengodi.it)
 
-Telefono: [0577 355116](tel:00390577355116)
+📞 Telefono: [+39 329 3134760](tel:+393293134760)
 
-Orario: 10.00 - 23.30  
-Giorno di chiusura: LUNEDÌ
-
----
-
-[Prenota ora](prenota.html)
-
----
-
-[Indicazioni stradali / Directions](https://www.google.it/maps/dir//Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z)
+🕣 Orario: **10.00 - 23.30**  
+🔒 Giorno di chiusura: **Lunedì**

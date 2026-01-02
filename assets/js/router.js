@@ -63,7 +63,9 @@ class Router {
 
     // Controlla se la route esiste
     if (!this.routes[path]) {
-      path = ''; // Fallback alla home
+      // Route non trovata - mostra 404
+      this.show404(path);
+      return;
     }
 
     const route = this.routes[path];
@@ -89,6 +91,47 @@ class Router {
 
     // Scroll to top
     window.scrollTo(0, 0);
+  }
+
+  show404(invalidPath) {
+    // Mostra pagina 404
+    const container = document.getElementById('md-content');
+    const spinner = document.getElementById('loading-spinner');
+    
+    if (spinner) spinner.style.display = 'none';
+    
+    if (container) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 60px 20px;">
+          <h1 style="font-size: 72px; color: #cc580c; margin-bottom: 20px;">404</h1>
+          <h2 style="margin-bottom: 30px;">Pagina non trovata</h2>
+          <p style="margin-bottom: 30px; color: #666;">
+            La pagina "${invalidPath}" che stai cercando non esiste.
+          </p>
+          <a href="#/" class="btn" style="display: inline-block; background: #cc580c; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+            Torna alla Home
+          </a>
+        </div>
+      `;
+    }
+    
+    // Aggiorna title
+    document.title = "404 - Pagina non trovata | Bengodi";
+    const pageTitle = document.getElementById('page-title');
+    if (pageTitle) {
+      pageTitle.textContent = "Pagina non trovata";
+    }
+    
+    // Rimuovi classi active dal menu
+    const menuItems = document.querySelectorAll('.menu.main .menu-item');
+    menuItems.forEach(item => item.classList.remove('active'));
+    
+    // Nascondi header image
+    const header = document.querySelector('header');
+    if (header) header.className = '';
+    
+    // Nascondi tutti gli elementi specifici
+    this.togglePageElements({});
   }
 
   updateBodyClass(className) {
@@ -190,12 +233,35 @@ class Router {
   
   loadContent(mdFile) {
     const container = document.getElementById('md-content');
+    const spinner = document.getElementById('loading-spinner');
+    
+    // Mostra spinner
+    if (spinner) {
+      spinner.style.display = 'flex';
+      spinner.setAttribute('aria-busy', 'true');
+    }
+    
     if (container) {
-      container.innerHTML = '<p>Caricamento contenuto...</p>';
+      container.style.display = 'none';
       
       // Usa il loader MD esistente
       if (typeof loadMDContent === 'function') {
-        loadMDContent(mdFile, 'md-content');
+        loadMDContent(mdFile, 'md-content').then(() => {
+          // Nascondi spinner quando il contenuto è caricato
+          if (spinner) {
+            spinner.style.display = 'none';
+            spinner.setAttribute('aria-busy', 'false');
+          }
+          container.style.display = 'block';
+        }).catch((error) => {
+          console.error('Error loading content:', error);
+          if (spinner) {
+            spinner.style.display = 'none';
+            spinner.setAttribute('aria-busy', 'false');
+          }
+          container.style.display = 'block';
+          container.innerHTML = '<p style="color: red;">Errore nel caricamento del contenuto.</p>';
+        });
       }
     }
   }

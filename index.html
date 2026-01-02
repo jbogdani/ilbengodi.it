@@ -22,8 +22,10 @@
     content="Enoteca e ristorante Bengodi a Castelnuovo Berardenga nel Chianti: cucina toscana tradizionale con ingredienti selezionati e un'amplissima scelta di vini." />
   <meta property="og:url" content="https://ilbengodi.it/" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <script src="assets/js/md-loader.js"></script>
@@ -36,15 +38,18 @@
   <meta name="theme-color" content="#cc580c">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
 <body itemscope itemtype="https://schema.org/Restaurant">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content" aria-label="Vai al contenuto principale">Vai al contenuto principale</a>
+  
   <meta itemprop="servesCuisine" content="Italian">
   <meta itemprop="paymentAccepted" content="cash, credit card, debit card">
   <meta itemprop="acceptsReservations" content="https://ilbengodi.it/./prenota">
@@ -57,9 +62,9 @@
   </span>
 
 
-  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #333;">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #333;" role="navigation" aria-label="Navigazione principale">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar">
@@ -98,22 +103,29 @@
 
   <div class="container">
     <div class="heading text-center my-5">
-      <img class="dividerline" src="assets/images/css/sep.png" alt="">
+      <img class="dividerline" src="assets/images/css/sep.png" alt="" role="presentation" loading="lazy">
       <h1 id="page-title">Enoteca <span class="orange">B</span>engodi</h1>
-      <img class="dividerline" src="assets/images/css/sep.png" alt="">
+      <img class="dividerline" src="assets/images/css/sep.png" alt="" role="presentation" loading="lazy">
     </div>
 
 
 
     <!-- Ricerca vini (solo pagina vini) -->
     <div class="search_wine_container" style="display:none;">
-      <input type="search" id="search_wine" placeholder="Cerca cantina/vino">
+      <input type="search" id="search_wine" placeholder="Cerca cantina/vino" aria-label="Cerca cantina o vino">
     </div>
 
     <!-- Contenuto caricato dinamicamente -->
-    <div id="md-content" class="md-content-container">
-      <p>Caricamento contenuto...</p>
-    </div>
+    <main id="main-content" class="md-content-container">
+      <!-- Loading spinner -->
+      <div id="loading-spinner" class="spinner-container" style="display:none;" aria-live="polite" aria-busy="true">
+        <div class="spinner"></div>
+        <p>Caricamento...</p>
+      </div>
+      <div id="md-content">
+        <p>Caricamento contenuto...</p>
+      </div>
+    </main>
 
     <!-- Mappa (solo pagina dove) -->
     <div class="map-container" style="display:none;">
@@ -214,85 +226,85 @@
         <div class="gallery-container">
           <ul class="gallery home" data-rel="home">
             <li data-id="enoteca_bengodi_1.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_1.jpg"
-                class="glightbox" data-gallery="gallery1" data-glightbox="title: Ristorante & Enoteca Bengodi"><img src="assets/images/galleries/home/enoteca_bengodi_1_thumb.jpg"
+                class="glightbox" data-gallery="gallery1" data-glightbox="title: Ristorante & Enoteca Bengodi"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_1_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_2.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_2.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_2_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_2_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_3.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_3.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_3_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_3_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_4.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_4.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_4_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_4_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_5.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_5.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_5_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_5_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_6.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_6.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_6_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_6_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_7.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_7.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_7_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_7_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_8.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_8.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_8_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_8_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_9.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_9.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_9_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_9_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_10.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_10.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_10_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_10_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_11.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_11.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_11_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_11_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_12.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_12.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_12_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_12_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_13.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_13.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_13_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_13_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
             <li data-id="enoteca_bengodi_14.jpg"><a href="assets/images/galleries/home/enoteca_bengodi_14.jpg"
                 class="glightbox" data-glightbox="title: "Ristorante & Enoteca Bengodi"
-                rel="home" data-gallery="gallery1"><img src="assets/images/galleries/home/enoteca_bengodi_14_thumb.jpg"
+                rel="home" data-gallery="gallery1"><img loading="lazy" src="assets/images/galleries/home/enoteca_bengodi_14_thumb.jpg"
                   alt="Ristorante & Enoteca Bengodi" /></a>
               <div class="caption">Ristorante & Enoteca Bengodi</div>
             </li>
@@ -364,15 +376,15 @@
         </div>
 
         <div class="col-sm">
-          <a href="tel:+393293134760">
-            <i class="fa fa-phone fa-3x"></i>
+          <a href="tel:+393293134760" aria-label="Chiamaci al +39 329 313 4760">
+            <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
             <br>
             <span itemprop="telephone">+39 329 3134760</span>
           </a>
         </div>
 
         <div class="col-sm">
-          <a href="https://wa.me/393293134760">
+          <a href="https://wa.me/393293134760" aria-label="Contattaci su WhatsApp">
             <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
             <br>
             <span itemprop="telephone">+39 329 3134760</span>
@@ -380,7 +392,7 @@
         </div>
 
         <div class="col-sm">
-          <i class="fa fa-clock-o fa-3x"></i><br>
+          <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i><br>
           <meta itemprop="openingHours" content="Tu-Sa 11:00-23:00" />
           Aperto: 11:00 - 23:00 <br> Giorno di chiusura: lunedì
         </div>
@@ -404,7 +416,6 @@
 
   <script src="assets/js/frontend.js"></script>
   <script src="assets/js/wine-filter.js"></script>
-  <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-10461068-36', 'auto'); ga('send', 'pageview');</script>
 </body>
 
 </html>
