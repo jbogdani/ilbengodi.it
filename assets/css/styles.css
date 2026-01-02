@@ -1,0 +1,558 @@
+/* ============================================
+   BENGODI WEBSITE - MAIN STYLES
+   ============================================ */
+
+/* ============================================
+   1. GLOBAL & BASE STYLES
+   ============================================ */
+
+a,
+a:hover {
+  color: #cc580c;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Playball, cursive;
+}
+h1::first-letter,
+h2::first-letter,
+h3::first-letter,
+h4::first-letter,
+h5::first-letter {
+  color: #cc580c !important;
+}
+
+
+.orange {
+  color: #cc580c;
+}
+
+.container{
+  max-width: 960px;
+}
+
+
+/* ============================================
+   2. NAVIGATION / NAVBAR
+   ============================================ */
+
+.navbar-dark .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .nav-item.active .nav-link,
+.navbar-dark .nav-item .nav-link:hover {
+  background: #cc580c !important;
+  color: #fff !important;
+}
+
+
+/* ============================================
+   3. HEADER
+   ============================================ */
+
+header {
+  margin-top: 56px;
+}
+
+/* Header title (Bengodi) */
+header .intro {
+  font-family: Playball, cursive;
+  font-size: clamp(40px, 8vw, 60px);
+  line-height: 1.1;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header .intro.smaller {
+  font-size: clamp(30px, 6vw, 45px);
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* Header image container */
+header .head-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .head-image .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+header .head-image .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+header .head-image .intro-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+header img.site-title {
+  display: none;
+}
+
+/* Home page header - larger */
+header.home .head-image,
+header.index .head-image {
+  height: 500px;
+}
+
+header.home .intro,
+header.index .intro {
+  font-size: clamp(50px, 10vw, 80px);
+}
+
+header.home .intro.smaller,
+header.index .intro.smaller {
+  font-size: clamp(35px, 7vw, 55px);
+}
+
+header.home img.site-title,
+header.index img.site-title {
+  max-width: 150px;
+}
+
+/* Other pages header - medium */
+header.dove .head-image,
+header.prenota .head-image,
+header.specialita .head-image,
+header.vini .head-image {
+  height: 300px;
+}
+
+/* Responsive header sizes */
+@media screen and (max-width: 768px) {
+  header.home .head-image,
+  header.index .head-image {
+    height: 400px;
+  }
+  
+  header.dove .head-image,
+  header.prenota .head-image,
+  header.specialita .head-image,
+  header.vini .head-image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header.home .head-image,
+  header.index .head-image {
+    height: 300px;
+  }
+  
+  header.dove .head-image,
+  header.prenota .head-image,
+  header.specialita .head-image,
+  header.vini .head-image {
+    height: 200px;
+  }
+}
+
+
+/* ============================================
+   4. MAIN CONTENT AREA
+   ============================================ */
+
+/* Page heading (under header) */
+.heading h1,
+.heading h2 {
+  font-weight: 700;
+  font-size: 35px;
+  color: #333;
+  margin: 0;
+  padding: 5px;
+}
+
+.heading h3 {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Markdown content container */
+.md-content-container {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.md-content-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #cc580c;
+}
+
+.md-content-container h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.md-content-container h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.md-content-container h4 {
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: bold;
+}
+
+.md-content-container p {
+  margin-bottom: 15px;
+}
+
+.md-content-container ul,
+.md-content-container ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.md-content-container li {
+  margin-bottom: 5px;
+}
+
+.md-content-container blockquote {
+  border-left: 4px solid #cc580c;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.md-content-container hr {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #cc580c;
+}
+
+.md-content-container a {
+  color: #cc580c;
+  text-decoration: none;
+}
+
+.md-content-container a:hover {
+  text-decoration: underline;
+}
+
+.md-content-container code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.md-content-container pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.md-content-container pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.md-content-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.md-content-container table th,
+.md-content-container table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.md-content-container table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Page-specific content styles */
+.specialita .md-content-container h2,
+.vini .md-content-container h2 {
+  color: #cc580c;
+  text-align: center;
+}
+
+.dove .md-content-container {
+  text-align: left;
+}
+
+/* Loading state */
+.md-content-container > p:first-child:last-child {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+#md-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+#md-content.loading {
+  opacity: 0.5;
+}
+
+#page-title {
+  transition: all 0.3s ease;
+}
+
+
+/* ============================================
+   5. GALLERY
+   ============================================ */
+
+.home-gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.home-gallery ul li {
+  flex: 1 1 calc(50% - 15px);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.home-gallery ul li:hover {
+  opacity: 0.7;
+}
+
+.home-gallery ul li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-gallery ul li .caption {
+  margin: 0;
+  font-size: 12px;
+  background: #333;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-gallery ul li {
+    flex: 1 1 calc(33.333% - 15px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home-gallery ul li {
+    flex: 1 1 calc(25% - 15px);
+  }
+}
+
+
+/* ============================================
+   6. FORMS
+   ============================================ */
+
+.form-container {
+  margin-top: 20px;
+}
+
+.userform.prenota {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #e2e2e2;
+  background: #ebebeb;
+  padding: 30px;
+}
+
+.userform.prenota .control-label {
+  text-align: left;
+}
+
+.userform.prenota input,
+.userform.prenota select,
+.userform.prenota textarea {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+  padding: 15px 30px;
+  margin-right: 3%;
+  margin-bottom: 30px;
+  outline: 0;
+  height: 50px;
+  box-shadow: none;
+}
+
+.userform.prenota textarea {
+  height: 100px;
+}
+
+
+.userform.prenota input[type="submit"]:hover,
+.userform.prenota input[type="reset"]:hover {
+  background: #cc580c;
+}
+
+
+/* ============================================
+   7. MAP & WINE SEARCH
+   ============================================ */
+
+.map-container {
+  margin: 20px 0;
+}
+
+.search_wine_container {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.search_wine_container #search_wine {
+  width: 300px;
+  border: none;
+  background: #ebebeb;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.search_wine_container #search_wine:focus {
+  outline: 0;
+  background: #fbfbfb;
+}
+
+
+/* ============================================
+   8. FOOTER
+   ============================================ */
+
+footer {
+  background: #cc580c;
+  margin-top: 120px;
+  position: relative;
+  color: #fff;
+}
+
+footer ul li {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+footer ul li:hover {
+  background: #2a2a2a;
+}
+
+footer a,
+footer a:hover,
+footer ul li:hover a {
+  color: #fff;
+}
+
+footer p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+footer .gototop {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  position: absolute;
+  margin-left: -30px;
+  top: -35px;
+  border-radius: 50%;
+}
+
+footer .gototop i {
+  color: #cc580c;
+  line-height: 70px;
+}
+
+
+/* ============================================
+   9. HOME PAGE SPECIFIC
+   ============================================ */
+
+.home-menu {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px dotted #cc580c;
+  border-bottom: 1px dotted #cc580c;
+}
+
+.home-menu ul.home {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-menu ul.home li {
+  display: inline-block;
+}
+
+.home-menu ul.home li a {
+  padding: 20px;
+  transition: all 0.7s;
+}
+
+.home-menu ul.home li a:hover {
+  background: #cc580c;
+  color: #fff !important;
+}
+
+
+/* ============================================
+   10. SPA ROUTER / PAGE VISIBILITY
+   ============================================ */
+
+body:not(.home) .home-gallery,
+body:not(.home) .home-menu,
+body:not(.home) .home-only-widget {
+  display: none !important;
+}
+
+.TA_certificateOfExcellence {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+}
+
