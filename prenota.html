@@ -152,7 +152,7 @@ Note: ${note || "-"}
           <div>
             <p>Per prenotare un tavolo al Ristorante Enoteca Bengodi, vi preghiamo di compilare il modulo inserendo un
               numero di telefono valido, che useremo per confermarvi la prenotazione.</p>
-            <p><strong>Oppure</strong>&nbsp;chiamateci direttamente&nbsp;al numero: <a href="tel:+393293134760">+39 329
+            <p><strong>Oppure</strong>&nbsp;chiamateci direttamente&nbsp;al numero: <a href="tel:+393293134760"><i class="fa fa-phone"></i> +39 329
                 3134760</a>.</p>
             <p>Vi aspettiamo!</p>
 
@@ -170,7 +170,7 @@ Note: ${note || "-"}
                   <label class=" control-label">Numero posti al tavolo<span style="color:red"> *</span> </label>
                   <select name="posti" class="form-control" required>
                     <option>1</option>
-                    <option selected>2</option>
+                    <option selected="selected">2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
@@ -190,29 +190,21 @@ Note: ${note || "-"}
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                  <div class="row" style="margin-top:15px">
+                <div class="row mt-5" >
 
-  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
-    <button type="submit" class="btn btn-success btn-block">
-      <i class="fa fa-envelope"></i> Prenota via Email
-    </button>
-  </div>
+                  <div class="col-xs-12 col-md-6" style="margin-bottom:10px">
+                    <button type="submit" class="btn btn-success btn-block">
+                      <i class="fa fa-envelope fa-2x"></i><br />Prenota via Email
+                    </button>
+                  </div>
 
-  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
-    <button type="button"
-            class="btn btn-success btn-block"
-            onclick="prenotaWhatsApp()">
-      <i class="fa fa-whatsapp"></i> Prenota via WhatsApp
-    </button>
-  </div>
+                  <div class="col-xs-12 col-md-6" style="margin-bottom:10px">
+                    <button type="button" class="btn btn-success btn-block" onclick="prenotaWhatsApp()">
+                      <i class="fa fa-whatsapp fa-2x"></i><br />Prenota via WhatsApp
+                    </button>
+                  </div>
 
-  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
-    <button type="reset" class="btn btn-default btn-block">
-      Annulla
-    </button>
-  </div>
-
-</div>
+                </div>
             </div>
           </div>
           </form>
@@ -275,10 +267,10 @@ Note: ${note || "-"}
 
       </ul>
 
-      <hr>
+      <hr />
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-2 col-sm-offset-1">
           <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <a target="_blank" title="Apri in Google Maps"
               href="https://www.google.com/maps?q=Via+della+Societ%C3%A0+Operaia+11+-+53019+Castelnuovo+Berardenga">
@@ -328,7 +320,8 @@ Note: ${note || "-"}
       </div>
       <hr>
       <p>
-        &copy; 2022 – <script>document.write(new Date().getFullYear())</script> <span itemprop="legalName">Numeroprimo srl</span>
+        &copy; 2022 –
+        <script>document.write(new Date().getFullYear())</script> <span itemprop="legalName">Numeroprimo srl</span>
       </p>
       <p>
         P.IVA e CF <span itemprop="taxID">01424600524</span>
