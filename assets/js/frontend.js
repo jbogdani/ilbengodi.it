@@ -1,9 +1,23 @@
 let map = null;
 let marker = null;
+let lightbox = null;
 
-$(document).ready(function () {
-  $("a.fancybox").fancybox();
-});
+// Inizializza GLightbox quando il DOM è pronto
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGallery);
+} else {
+  initGallery();
+}
+
+function initGallery() {
+  if (lightbox) {
+    lightbox.reload();
+  } else {
+    lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  }
+}
 
 // Inizializza la mappa solo quando diventa visibile
 function initMap() {
