@@ -170,7 +170,7 @@ Note: ${note || "-"}
                   <label class=" control-label">Numero posti al tavolo<span style="color:red"> *</span> </label>
                   <select name="posti" class="form-control" required>
                     <option>1</option>
-                    <option>2</option>
+                    <option selected>2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
@@ -190,13 +190,29 @@ Note: ${note || "-"}
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                  <button type="submit" class="btn btn-success">
-                    <i class="fa fa-envelope"></i> Prenota via Email
-                  </button>
-                  <button type="button" class="btn btn-success" onclick="prenotaWhatsApp()">
-                    <i class="fa fa-whatsapp"></i> Prenota via WhatsApp
-                  </button>
-                  <button class="btn btn-default" type="reset">Anulla</button>
+                  <div class="row" style="margin-top:15px">
+
+  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
+    <button type="submit" class="btn btn-success btn-block">
+      <i class="fa fa-envelope"></i> Prenota via Email
+    </button>
+  </div>
+
+  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
+    <button type="button"
+            class="btn btn-success btn-block"
+            onclick="prenotaWhatsApp()">
+      <i class="fa fa-whatsapp"></i> Prenota via WhatsApp
+    </button>
+  </div>
+
+  <div class="col-xs-12 col-md-4" style="margin-bottom:10px">
+    <button type="reset" class="btn btn-default btn-block">
+      Annulla
+    </button>
+  </div>
+
+</div>
             </div>
           </div>
           </form>
