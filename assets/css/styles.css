@@ -629,10 +629,3 @@ body:not(.home) .home-menu,
 body:not(.home) .home-only-widget {
   display: none !important;
 }
-
-.TA_certificateOfExcellence {
-  display: block;
-  margin: auto;
-  max-width: 200px;
-}
-
