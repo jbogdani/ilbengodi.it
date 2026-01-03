@@ -8,6 +8,17 @@
 
 const BUSINESS_INFO = {
   /**
+   * Indirizzo completo del ristorante
+   */
+  address: {
+    street: 'Via della Società Operaia 11',
+    postalCode: '53019',
+    city: 'Castelnuovo Berardenga',
+    province: 'SI',
+    country: 'Italia'
+  },
+
+  /**
    * Numero di telefono
    * Formato: con prefisso internazionale senza spazi
    */

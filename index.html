@@ -171,8 +171,27 @@
 
     <!-- Mappa (solo pagina dove) -->
     <div class="map-container" style="display:none;">
-      <div id="map" style="width: 100%;height:400px;"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>📍 Indirizzo: <strong id="dove-address">...</strong> </p>
+        <ul>
+          <li><a id="dove-google-maps" href="#">🚘
+              Naviga con Google Maps</a></li>
+          <li><a id="dove-apple-maps" href="#">🚘
+              Naviga con Apple Maps</a></li>
+        </ul>
+        <p>✉️ E-mail: <a href="mailto:info@ilbengodi.it">info@ilbengodi.it</a></p>
+        <p id="dove-whatsapp">💬 WhatsApp: <a href="#">...</a></p>
+        <p id="dove-phone">📞 Telefono: <a href="#">...</a></p>
+        <p id="dove-schedule">🕣 Orario: <strong>...</strong><br>🔒 Giorno di chiusura: <strong>...</strong></p>
+
+      </div>
+      <div class="col-sm-6">
+        <div id="map" style="width: 100%;height:400px;"></div>
+      </div>
     </div>
+    </div>
+
 
     <!-- Form prenotazione (solo pagina prenota) -->
     <div class="form-container" style="display:none;">
@@ -404,13 +423,12 @@
 
       <div class="row mt-5">
         <div class="col-sm my-2">
-          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <a target="_blank" title="Apri in Google Maps"
-              href="https://www.google.com/maps?q=Via+della+Societ%C3%A0+Operaia+11+-+53019+Castelnuovo+Berardenga">
+          <p id="footer-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <a target="_blank" title="Apri in Google Maps" href="#">
               <i class="fa fa-map-marker fa-3x"></i><br>
-              <span itemprop="streetAddress">Via della Società Operaia 11</span> -
-              <span itemprop="postalCode">53019</span>
-              <span itemprop="addressLocality">Castelnuovo Berardenga</span>
+              <span itemprop="streetAddress">...</span> -
+              <span itemprop="postalCode">...</span>
+              <span itemprop="addressLocality">...</span>
             </a>
           </p>
         </div>
