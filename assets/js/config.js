@@ -61,6 +61,7 @@ const BUSINESS_INFO = {
    * Esempi di configurazione:
    */
   holidays: [
+    ['2026-01-12', '2026-02-12'],     // Chiusura gennaio 2026
     // ['2026-08-01', '2026-08-15'],     // Ferie estive agosto 2026
     // ['2026-12-24', '2027-01-06'],     // Ferie natalizie 2026/2027
     // ['2027-02-15', '2027-02-28'],     // Chiusura febbraio 2027
