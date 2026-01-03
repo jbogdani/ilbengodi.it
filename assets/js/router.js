@@ -12,8 +12,9 @@ class Router {
         showTripadvisor: true
       },
       'dove': {
-        mdFile: 'dove.md',
-        showMap: true
+        // Pagina senza contenuto MD - tutto gestito dinamicamente in index.html
+        showMap: true,
+        skipMdLoad: true
       },
       'prenota': {
         mdFile: 'prenota.md',
@@ -71,8 +72,8 @@ class Router {
     const route = this.routes[path];
     this.currentRoute = path;
 
-    // Estrai la classe dal nome del file MD (senza estensione)
-    const pageClass = route.mdFile.replace('.md', '');
+    // Estrai la classe dal nome del file MD (senza estensione) o usa il path
+    const pageClass = route.mdFile ? route.mdFile.replace('.md', '') : path;
 
     // Aggiorna la classe del body
     this.updateBodyClass(pageClass);
@@ -86,8 +87,26 @@ class Router {
     // Aggiorna l'header
     this.updateHeader(path);
 
-    // Carica il contenuto MD
-    this.loadContent(route.mdFile);
+    // Carica il contenuto MD (se presente)
+    if (route.skipMdLoad) {
+      // Non caricare MD, nascondi il contenitore principale
+      const mainContent = document.getElementById('main-content');
+      const spinner = document.getElementById('loading-spinner');
+      if (spinner) spinner.style.display = 'none';
+      if (mainContent) mainContent.style.display = 'none';
+      
+      // Aggiorna solo il titolo
+      document.title = this.getPageTitle(path);
+      const pageTitle = document.getElementById('page-title');
+      if (pageTitle) {
+        pageTitle.innerHTML = this.getPageHeading(path);
+      }
+    } else {
+      // Mostra il contenitore principale
+      const mainContent = document.getElementById('main-content');
+      if (mainContent) mainContent.style.display = 'block';
+      this.loadContent(route.mdFile);
+    }
 
     // Scroll to top
     window.scrollTo(0, 0);
@@ -179,6 +198,28 @@ class Router {
     }
   }
 
+  getPageTitle(path) {
+    const titles = {
+      '': 'Ristorante enoteca Bengodi, Castelnuovo Berardegna in Chianti',
+      'dove': 'Dove siamo - Ristorante Enoteca Bengodi',
+      'prenota': 'Prenota - Ristorante Enoteca Bengodi',
+      'specialita': 'Le nostre specialità - Ristorante Enoteca Bengodi',
+      'vini': 'Carta dei vini - Ristorante Enoteca Bengodi'
+    };
+    return titles[path] || 'Ristorante Enoteca Bengodi';
+  }
+
+  getPageHeading(path) {
+    const headings = {
+      '': 'Enoteca <span class="orange">B</span>engodi',
+      'dove': '<span class="orange">D</span>ove siamo',
+      'prenota': '<span class="orange">P</span>renota un tavolo',
+      'specialita': 'Le nostre <span class="orange">s</span>pecialità',
+      'vini': 'Carta dei <span class="orange">v</span>ini'
+    };
+    return headings[path] || 'Enoteca <span class="orange">B</span>engodi';
+  }
+
   togglePageElements(route) {
     // Gallery (solo home)
     const gallerySection = document.querySelector('.home-gallery');
@@ -201,6 +242,11 @@ class Router {
       if (route.showMap && typeof window.initMap === 'function') {
         // Usa setTimeout per permettere al DOM di renderizzare
         setTimeout(() => window.initMap(), 100);
+        
+        // Aggiorna anche i contatti della pagina dove
+        if (typeof window.updateDoveContacts === 'function') {
+          setTimeout(() => window.updateDoveContacts(), 100);
+        }
       }
     }
 

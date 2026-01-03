@@ -103,6 +103,9 @@ if (document.readyState === 'loading') {
   updateDoveContacts();
 }
 
+// Esponi la funzione globalmente per essere chiamata dal router
+window.updateDoveContacts = updateDoveContacts;
+
 // Funzione per generare l'abbreviazione dei giorni di apertura per il tag meta
 function getOpeningDaysAbbr() {
   const daysAbbr = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
