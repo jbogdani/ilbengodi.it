@@ -45,7 +45,7 @@ function initMap() {
   
   marker = L.marker([43.346092, 11.5019804]).addTo(map);
   marker.bindPopup(
-    `<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: <a href="tel:+393293134760">📞 +39 329 3134760</a><br />Orario: ${BUSINESS_INFO.openingTime} - ${BUSINESS_INFO.closingTime}, chiuso il ${closingDay}<br /><a class="btn btn-info btn-sm" href="https://www.google.it/maps/dir/Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z">🚘 Avvia navigatore</a>`
+    `<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: <a href="tel:${BUSINESS_INFO.phone}">📞 ${BUSINESS_INFO.phone.replace(/^\+39/, '+39 ')}</a><br />Orario: ${BUSINESS_INFO.openingTime} - ${BUSINESS_INFO.closingTime}, chiuso il ${closingDay}<br /><a class="btn btn-info btn-sm" href="https://www.google.it/maps/dir/Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z">🚘 Avvia navigatore</a>`
   );
 }
 
@@ -64,8 +64,9 @@ function getOpeningDaysAbbr() {
   return `${daysAbbr[firstOpenDay]}-${daysAbbr[lastOpenDay]}`;
 }
 
-// Funzione per aggiornare il footer con gli orari
+// Funzione per aggiornare il footer con gli orari e contatti
 function updateFooter() {
+  // Aggiorna orari
   const footerSchedule = document.querySelector('footer .col-sm:last-child');
   if (footerSchedule) {
     const daysOfWeek = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
@@ -77,6 +78,22 @@ function updateFooter() {
       <meta itemprop="openingHours" content="${openingDaysAbbr} ${BUSINESS_INFO.openingTime}-${BUSINESS_INFO.closingTime}" />
       Aperto: ${BUSINESS_INFO.openingTime} - ${BUSINESS_INFO.closingTime} <br> Giorno di chiusura: ${closingDay}
     `;
+  }
+  
+  // Aggiorna numeri di telefono
+  const phoneFormatted = BUSINESS_INFO.phone.replace(/^\+39/, '+39 ');
+  
+  const footerPhone = document.getElementById('footer-phone');
+  if (footerPhone) {
+    footerPhone.href = `tel:${BUSINESS_INFO.phone}`;
+    footerPhone.setAttribute('aria-label', `Chiamaci al ${phoneFormatted}`);
+    footerPhone.querySelector('span').textContent = phoneFormatted;
+  }
+  
+  const footerWhatsapp = document.getElementById('footer-whatsapp');
+  if (footerWhatsapp) {
+    footerWhatsapp.href = `https://wa.me/${BUSINESS_INFO.whatsapp}`;
+    footerWhatsapp.querySelector('span').textContent = phoneFormatted;
   }
 }
 

@@ -232,7 +232,7 @@
             return;
           }
 
-          const numeroWhatsApp = "393293134760";
+          const numeroWhatsApp = BUSINESS_INFO.whatsapp;
           const messaggio = `Prenotazione tavolo\n\nNome: ${nome}\nTelefono: ${telefono}\nPersone: ${posti}\nData e ora: ${data}\nNote: ${note || "-"}`;
           const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(messaggio);
           window.open(url, "_blank");
@@ -423,18 +423,18 @@
         </div>
 
         <div class="col-sm my-2">
-          <a href="tel:+393293134760" aria-label="Chiamaci al +39 329 313 4760">
+          <a id="footer-phone" href="#" aria-label="Chiamaci">
             <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
             <br>
-            <span itemprop="telephone">+39 329 3134760</span>
+            <span itemprop="telephone">...</span>
           </a>
         </div>
 
         <div class="col-sm my-2">
-          <a href="https://wa.me/393293134760" aria-label="Contattaci su WhatsApp">
+          <a id="footer-whatsapp" href="#" aria-label="Contattaci su WhatsApp">
             <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
             <br>
-            <span itemprop="telephone">+39 329 3134760</span>
+            <span itemprop="telephone">...</span>
           </a>
         </div>
 

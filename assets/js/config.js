@@ -8,6 +8,18 @@
 
 const BUSINESS_INFO = {
   /**
+   * Numero di telefono
+   * Formato: con prefisso internazionale senza spazi
+   */
+  phone: '+393293134760',
+
+  /**
+   * Numero WhatsApp (di solito uguale al telefono)
+   * Formato: solo cifre, con prefisso internazionale
+   */
+  whatsapp: '393293134760',
+
+  /**
    * Orario di apertura (formato 24h: HH:MM)
    * Esempio: '11:00', '12:30', '18:00'
    */
