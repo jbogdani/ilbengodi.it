@@ -39,7 +39,7 @@ function initMap() {
   
   marker = L.marker([43.346092, 11.5019804]).addTo(map);
   marker.bindPopup(
-    "<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: 0577 355116<br />Orario: 10.00 - 23.30<br />Chiuso il lunedì"
+    "<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: <a href=\"tel:+393293134760\">+39 329 3134760</a><br />Orario: 11.00 - 23.30, chiuso il lunedì"
   );
 }
 
