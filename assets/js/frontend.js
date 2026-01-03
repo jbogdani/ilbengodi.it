@@ -39,7 +39,7 @@ function initMap() {
   
   marker = L.marker([43.346092, 11.5019804]).addTo(map);
   marker.bindPopup(
-    "<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: <a href=\"tel:+393293134760\">+39 329 3134760</a><br />Orario: 11.00 - 23.30, chiuso il lunedì"
+    "<big>Enoteca &amp; Ristorante <strong>Bengodi</strong></big>.<br />Telefono: <a href=\"tel:+393293134760\">📞 +39 329 3134760</a><br />Orario: 11.00 - 23.30, chiuso il lunedì<br /><a class=\"btn btn-info btn-sm\" href=\"https://www.google.it/maps/dir/Via+della+Societ%C3%A0+Operaia,+11,+53019+Castelnuovo+Berardenga+SI/@43.346083,11.5000403,17z\">🚘 Avvia navigatore</a>"
   );
 }
 

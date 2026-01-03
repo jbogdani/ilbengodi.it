@@ -110,7 +110,7 @@ Via della Società Operaia 11
 
 📧 info@ilbengodi.it  
 📱 +39 329 3134760  
-🕒 10:00-23:30 (Chiuso lunedì)
+🕒 10:00-23:00 (Chiuso lunedì)
 
 ## 📄 Licenza
 
