@@ -22,7 +22,7 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 ### Bellenda (Piemonte)
 - Palatini Col di luna
 
-### Canevel (Valdobbiadene, veneto)
+### Canevel (Valdobbiadene, Veneto)
 - La Vi' Prosecco Magnum
 - Valdobbiadene extra dry Magnum
 
@@ -40,7 +40,7 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 - Colle Duca Sauvignon Collio 2014
 - Colle Duca Friulano 2014
 
-### Felsina (Castelnuovo Berardenga, Toscana)
+### Felsina (Toscana, Castelnuovo Berardenga)
 - Metodo Classico Brut
 
 ### Feudi di S. Gregorio (Campania)
@@ -159,19 +159,19 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 ### Banfi (Toscana)
 - Brunello di Montalcino 2002
 
-### Barone Ricasoli (Castelnuovo Berardenga, Toscana)
+### Barone Ricasoli (Toscana, Castelnuovo Berardenga)
 - Brolio Bettino Chianti Classico 2013
 - Brolio Riserva Chianti classico riserva 2012
 - Chainti classico 2013
 - Casalferro IGT 2010
 - Castello di Brolio Gran Selezione 2010
 
-### Borgo Scopeto (Castelnuovo Berardenga, Toscana)
+### Borgo Scopeto (Toscana, Castelnuovo Berardenga)
 - Chianti Classico 2013
 - Chianti classico Riserva 2011
 - Borgo Nero IGT 2013
 
-### Bruna Grimaldi (Serralunga d'alba)
+### Bruna Grimaldi (Serralunga d'Alba)
 - Barolo Badarina 2009
 
 ### Campogiovanni (Toscana)
@@ -196,7 +196,7 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 - Chianti Classico 2013
 - San Lorenzo Gran Selezione 2011
 
-### Castello di Orgiale (Toscana) (castelnuovo berardenga)
+### Castello di Orgiale (Castelnuovo Berardenga, Toscana)
 - Chianti Classico 2011
 - Chianti classico 2012
 - Chianti Colli senesi 2011
