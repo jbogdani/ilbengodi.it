@@ -93,28 +93,6 @@
       </div>
     </div>
   </nav>
-  <script>
-    function toggleNavbar() {
-      const navbar = document.getElementById('navbar');
-      const button = document.querySelector('.navbar-toggler');
-      const isExpanded = navbar.classList.contains('show');
-      navbar.classList.toggle('show');
-      button.setAttribute('aria-expanded', !isExpanded);
-    }
-
-    // Close menu when a link is clicked
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuLinks = document.querySelectorAll('.navbar .nav-link');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-          const navbar = document.getElementById('navbar');
-          if (navbar.classList.contains('show')) {
-            toggleNavbar();
-          }
-        });
-      });
-    });
-  </script>
 
   <!--header-->
   <header class="home">
@@ -241,25 +219,6 @@
           </div>
         </form>
       </div>
-      <script>
-        function prenotaWhatsApp() {
-          const nome = document.querySelector('[name="nome"]').value;
-          const telefono = document.querySelector('[name="telefono"]').value;
-          const posti = document.querySelector('[name="posti"]').value;
-          const data = document.querySelector('[name="data"]').value;
-          const note = document.querySelector('[name="note"]').value;
-
-          if (!nome || !telefono || !posti || !data) {
-            alert("Compila tutti i campi obbligatori");
-            return;
-          }
-
-          const numeroWhatsApp = BUSINESS_INFO.whatsapp;
-          const messaggio = `Prenotazione tavolo\n\nNome: ${nome}\nTelefono: ${telefono}\nPersone: ${posti}\nData e ora: ${data}\nNote: ${note || "-"}`;
-          const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(messaggio);
-          window.open(url, "_blank");
-        }
-      </script>
     </div>
 
 
@@ -466,8 +425,7 @@
 
 
       <div class="border-top mt-5 pt-3">
-        &copy; 2022 –
-        <script>document.write(new Date().getFullYear())</script> <span itemprop="legalName">Numeroprimo srl</span>
+        &copy; 2022 – <span id="copyright-year"></span> <span itemprop="legalName">Numeroprimo srl</span>
         <br />
         P.IVA e CF <span itemprop="taxID">01424600524</span>
         <br />
@@ -480,7 +438,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-  <script src="assets/js/frontend.js"></script>
+  <!-- Moduli JavaScript separati per funzionalità -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/dove-page.js"></script>
+  <script src="assets/js/closure-alerts.js"></script>
+  <script src="assets/js/footer-update.js"></script>
+  <script src="assets/js/booking-form.js"></script>
+  <script src="assets/js/copyright-year.js"></script>
   <script src="assets/js/wine-filter.js"></script>
 </body>
 
