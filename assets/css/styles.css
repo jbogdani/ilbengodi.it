@@ -26,6 +26,39 @@
   outline-offset: 2px;
 }
 
+/* Animated hamburger menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Transform to X when open */
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
 a,
 a:hover {
   color: #cc580c;
@@ -120,7 +153,7 @@ h5::first-letter {
    ============================================ */
 
 header {
-  margin-top: 56px;
+  margin-top: 50px;
 }
 
 /* Header title (Bengodi) */
