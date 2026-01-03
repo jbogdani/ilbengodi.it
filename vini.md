@@ -40,7 +40,7 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 - Colle Duca Sauvignon Collio 2014
 - Colle Duca Friulano 2014
 
-### Felsina (Toscana, Castelnuovo Berardenga)
+### Felsina (Castelnuovo Berardenga, Toscana)
 - Metodo Classico Brut
 
 ### Feudi di S. Gregorio (Campania)
@@ -159,14 +159,14 @@ L'Enoteca Ristorante Bengodi vi offre una vasta scelta di vini da accompagnare a
 ### Banfi (Toscana)
 - Brunello di Montalcino 2002
 
-### Barone Ricasoli (Toscana, Castelnuovo Berardenga)
+### Barone Ricasoli (Castelnuovo Berardenga, Toscana)
 - Brolio Bettino Chianti Classico 2013
 - Brolio Riserva Chianti classico riserva 2012
 - Chainti classico 2013
 - Casalferro IGT 2010
 - Castello di Brolio Gran Selezione 2010
 
-### Borgo Scopeto (Toscana, Castelnuovo Berardenga)
+### Borgo Scopeto (Castelnuovo Berardenga, Toscana)
 - Chianti Classico 2013
 - Chianti classico Riserva 2011
 - Borgo Nero IGT 2013
