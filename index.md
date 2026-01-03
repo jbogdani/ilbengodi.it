@@ -15,3 +15,5 @@ L'enoteca e ristorante Bengodi è un locale dedicato alla buona cucina con una c
 In compagnia degli amici o della tua dolce metà il ristorante Bengodi rimane il luogo ideale per passare qualce ora piacevolissima. Saremo lieti di accettare prenotazioni per **gruppi organizzati**, offrendovi anche delle particolari **degustazioni**. Nei mesi più caldi potrete godervi le nostre specialità sedendovi **all'aperto**.
 
 Mettiamo a vostra disposizione i nostri prodotti e la nostra esperienza anche con **servizio catering**.
+
+[Prenota subito un tavolo](/#/prenota)!
