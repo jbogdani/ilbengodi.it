@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reindirizzamento...</title>
+    <script>
+        // Gestione automatica dei redirect da vecchi URL .html a nuovi URL con hash
+        (function() {
+            const path = window.location.pathname;
+            
+            // Se il path termina con .html, rimuovi l'estensione e reindirizza
+            if (path.endsWith('.html')) {
+                const pageName = path.replace(/.*\/([^\/]+)\.html$/, '$1');
+                const newUrl = '/#/' + pageName;
+                window.location.replace(newUrl);
+            } 
+            // Per qualsiasi altra pagina non trovata, vai alla home
+            else {
+                window.location.replace('/');
+            }
+        })();
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .message {
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Reindirizzamento in corso...</h1>
+        <p>Se non vieni reindirizzato automaticamente, <a href="/">clicca qui</a>.</p>
+    </div>
+</body>
+</html>
